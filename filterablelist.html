@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Contacts</title>
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    -->
+    <link rel="stylesheet" href="thirdparty/bootstrap-4.3.1.min.css" >
+</head>
+<body>
+    <header class="bg-success text-white p-4 mb-3">
+        <div class="container">
+            <h1>My Contacts</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card card-body">
+            <form class="form-inline mb-3">
+                <input id="filterName" placeholder="Search">
+                <input id="addItem" placeholder="Add Item">
+                <input type="submit" class="btn btn-dark" value="Add Item">
+            </form>
+            <h2>Contacts</h2>
+            <ul id="names" class="list-group">
+                <li class="list-group-item"><a href="#">Sangeetha</a></li>
+                <li class="list-group-item"><a href="#">Kanna</a></li>
+                <li class="list-group-item"><a href="#">Santhana</a></li>
+                <li class="list-group-item"><a href="#">Krishnan</a></li>
+                <li class="list-group-item"><a href="#">Aaipapa</a></li>
+                <li class="list-group-item"><a href="#">Engineer</a></li>
+                <li class="list-group-item"><a href="#">Computer</a></li>
+                <li class="list-group-item"><a href="#">Science</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+    //Filter Input
+    var filterName = document.getElementById('filterName');
+
+    filterName.addEventListener( 'keyup', filterNames )
+
+    function filterNames() {
+        let filterValue = document.getElementById('filterName').value.toUpperCase();
+
+        let ul = document.getElementById('names');        
+
+        let lis = ul.querySelectorAll('li.list-group-item');
+
+        for(let index =0;index < lis.length;index++){
+            let a = lis[index].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                lis[index].style.display = '';
+            } else {
+                lis[index].style.display = 'none';
+            }
+        }
+
+    }
+
+</script>
+</html>

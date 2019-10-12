@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.keyboard-app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pads {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.pads > div {
+    width: 12.1rem;
+    height: 3rem;
+    float: left;
+}
+
+.pads .pad1 {
+    background: #def
+}
+
+.pads .pad2 {
+    background: #fadecd
+}
+
+.pads .pad3 {
+    background: #adbecf
+}
+
+.pads .pad4 {
+    background: #782edf
+}
+
+.pads .pad5 {
+    background: #1d2edf
+}
+
+.pads .pad6 {
+    background: #2dfe3f
+}
+
+.pads .pad7 {
+    background: #2d003f
+}
+
+
+
