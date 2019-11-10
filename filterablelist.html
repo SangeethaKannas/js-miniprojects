@@ -53,13 +53,8 @@
 
         for(let index =0;index < lis.length;index++){
             let a = lis[index].getElementsByTagName('a')[0];
-            if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-                lis[index].style.display = '';
-            } else {
-                lis[index].style.display = 'none';
-            }
+            lis[index].style.display =  (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) ? '': 'none';
         }
-
     }
 
 </script>
