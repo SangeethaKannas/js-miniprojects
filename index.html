@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript Mini Projects</title>
     <link rel="stylesheet" href="https://use.font-awesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="meditationapp/meditation.css">
+    <link rel="stylesheet" href="./musicapp/styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./meditationapp/meditation.css">
 </head>
 
 <body>
-    <h1>Javascript MiniProjects</h1>
-    <ul>
-        <li><a href="#">Booklist</a></li>
-        <li><a href="#">Exams</a></li>
-        <li><a href="#">Furniture Shop</a></li>
-        <li><a href="#">Meditation</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">PDF Viewer</a></li>
-        <li><a href="#">Type Game</a></li>
+    <div class="container">
+    <h1 id="title"></h1>
+    <ul class="tabs">
+        <li class="tab-header"><a href="#" class="active">Booklist</a></li>
+        <li class="tab-header"><a href="#">Exams</a></li>
+        <li class="tab-header"><a href="#">Furniture Shop</a></li>
+        <li class="tab-header"><a href="#">Meditation</a></li>
+        <li class="tab-header"><a href="#">Music</a></li>
+        <li class="tab-header"><a href="#">PDF Viewer</a></li>
+        <li class="tab-header"><a href="#">Type Game</a></li>
     </ul>
+
     <section>
-        <article id='book-list'>
+
+        <article id='book-list' class="hide">
             <div class="container mt-4">
                 <h1 class="display-4 text-center">
                     <i class="fas fa-book-open"></i>My
@@ -63,7 +66,7 @@
             </div>
         </article>
 
-        <article id="furniture-shop">
+        <article id="furniture-shop" class="hide">
             <nav class="navbar">
                 <div class="navbar-center">
                     <span class="nav-icon"><i class="fas fa-bars"></i></span>
@@ -105,11 +108,10 @@
                 </div>
             </div>
 
-            </div>
-
+           
         </article>
       
-        <article id="meditationapp">
+        <article id="meditationapp" class="hide">
             <div class="meditation-app">
                 <div class="video-container">
                     <video loop>
@@ -147,7 +149,7 @@
             </div>
         </article>
     
-        <article id="musicapp">
+        <article id="musicapp" class="hide">
             <div class="keyboard-app">
                 <header>Keyboard</header>
                 <div class="visual">Visual</div>
@@ -178,7 +180,7 @@
             </div>
         </article>
 
-        <article id="pdfviewerapp">
+        <article id="pdfviewerapp" class="hide">
             <div class="top-bar">
                 <button class="btn" id="prev-page">
                     <i class="fas fa-arrow-circle-left"></i>Prev Page
@@ -195,43 +197,47 @@
         
             <canvas id="pdf-render"></canvas>
         </article>
-    </section>
-
-    <section>
-        <div class="bg-dark text-white">
-            <header class="bg-secondary text-center p-3 mb-5">Type It</header>
-        </div>
-        <div class="container text-center">
-            <div class="row ">
-                <div class="col-md-6 mx-auto">
-                    
-                    <p class="lead">Type the given word within <span clas="text-success" id="seconds">5</span> seconds</p>
-    
-                    <h2 class="display-m2 mb-5" id="current-word"></h2>
-                    
-                    <input id="wordInput" class="form-control form-control-lg" placeholder="Start Typing..." autofocus>
-                    <h4 class="mt-3" id="message"></h4>                
+   
+        <article class="hide">
+            <div class="bg-dark text-white">
+                <header class="bg-secondary text-center p-3 mb-5">Type It</header>
+            </div>
+            <div class="container text-center">
+                <div class="row ">
+                    <div class="col-md-6 mx-auto">
+                        
+                        <p class="lead">Type the given word within <span clas="text-success" id="seconds">5</span> seconds</p>
+        
+                        <h2 class="display-m2 mb-5" id="current-word"></h2>
+                        
+                        <input id="wordInput" class="form-control form-control-lg" placeholder="Start Typing..." autofocus>
+                        <h4 class="mt-3" id="message"></h4>                
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6"><h3>Time Left:<span id="time"></span></h3></div>                
-                <div class="col-md-6"><h3>Score:<span id="score"></span></h3></div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-12">
-                    <div class="card card-body bg-secondary text-white">
-                       <h5>Instructions</h5>
-                       <p>Type each word in the given amount of seconds to score. To play again just type the current word. Your score will reset</p>
+                <div class="row">
+                    <div class="col-md-6"><h3>Time Left:<span id="time"></span></h3></div>                
+                    <div class="col-md-6"><h3>Score:<span id="score"></span></h3></div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="card card-body bg-secondary text-white">
+                        <h5>Instructions</h5>
+                        <p>Type each word in the given amount of seconds to score. To play again just type the current word. Your score will reset</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
+
     </section>
+</div>
 </body>
-<script src="booklistapp/booklistapp.js"></script>
-<script src="furniture-shop-app/app.js"></script>
-<script src="meditationapp/meditation.js"></script>
-<script src="musicapp/keyboard.js"></script>
-<script src="pdfviewerapp/pdfviewer.js"></script>
-<script src="typegameapp/typegame.js"></script>
+
+<script src="./index.js"></script>
+<script src="./booklistapp/booklistapp.js"></script>
+<script src="./furniture-shop-app/app.js"></script>
+<script src="./meditationapp/meditation.js"></script>
+<script src="./musicapp/keyboard.js"></script>
+<script src="./pdfviewerapp/pdfviewer.js"></script>
+<script src="./typegameapp/typegame.js"></script>
 </html>
