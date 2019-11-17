@@ -1,28 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.keyboard-app {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .pads {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-
+    display: flex;
+    justify-content: center;
 }
 
 .pads > div {
-    width: 12.1rem;
+    width: 10.3rem;
     height: 3rem;
     float: left;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .pads .pad1 {
@@ -52,6 +38,3 @@
 .pads .pad7 {
     background: #2d003f
 }
-
-
-

@@ -8,7 +8,7 @@
                 "image": {
                     "fields" : {
                         "file" : {
-                            "url" : "./images/queenpanelbed.jpg"
+                            "url" : "./resources/images/queenpanelbed.jpg"
                         }                        
                     }
                 }

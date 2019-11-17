@@ -1,18 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=PT+sans');
+
+:root {
+    --primary-color: #74a064;
+    --primary-color-hover: #74a0dd;
+    --secondary-color: #adbcde;
+    --secondary-color-hover: #adbcde;
+    --light-hover: #f4f4f4;
+    --heading-color: #0c5d0c;
+}
+
 * {
     padding: 0;
-    margin: 0;    
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #e3f3e3;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'PT Sans', sans-serif ;
+    line-height: 1.1;
+    text-align: center;
+    padding: 10px;
+    color: var(--heading-color)
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
 }
 
 ul li, a {
     text-decoration: none;
-    color: black;
 }
 
-.container {
-    padding: 0.5rem;
+a {
+    color :#ccc;
 }
 
-.hide {
-    display: none;
+/*#book-list {
+    /*TODO: background-url: url('../img/...');
+} */
+
+#book-list h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
 }
 
+#book-list h2 {
+    font-size: 2rem;
+}
+
+.content-wrapper > section > article {
+    height: 100vh;
+    padding: 2rem 0;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.content-wrapper > section > article:first-child {
+    padding-top: 3rem;
+}
+
+label { 
+    min-width: 20%;
+    max-width: 20%;
+    font-size: 1.1rem;
+}
+
+input[type="text"] {
+    width: 30%;
+    padding: 0.2rem 1rem;
+    margin: 0 1rem;
+}

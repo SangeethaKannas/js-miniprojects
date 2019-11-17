@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.font-awesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./musicapp/styles.css">
+    <link rel="stylesheet" href="./navigation.css">
+    <link rel="stylesheet" href="./utility.css">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./meditationapp/meditation.css">
+    <link rel="stylesheet" href="./musicapp/musicapp.css">        
 </head>
 
-<body>
-    <div class="container">
-    <h1 id="title"></h1>
-    <ul class="tabs">
-        <li class="tab-header"><a href="#" class="active">Booklist</a></li>
-        <li class="tab-header"><a href="#">Exams</a></li>
-        <li class="tab-header"><a href="#">Furniture Shop</a></li>
-        <li class="tab-header"><a href="#">Meditation</a></li>
-        <li class="tab-header"><a href="#">Music</a></li>
-        <li class="tab-header"><a href="#">PDF Viewer</a></li>
-        <li class="tab-header"><a href="#">Type Game</a></li>
-    </ul>
+<body>    
+    <header class="cf">
+        <nav class="cf">
+            <ul class="tabs">
+                <li class="tab-header"><a href="#" class="active">Booklist</a></li>
+                <li class="tab-header"><a href="#">Exams</a></li>
+                <li class="tab-header"><a href="#">Furniture Shop</a></li>
+                <li class="tab-header"><a href="#">Meditation</a></li>
+                <li class="tab-header"><a href="#">Music</a></li>
+                <li class="tab-header"><a href="#">PDF Viewer</a></li>
+                <li class="tab-header"><a href="#">Type Game</a></li>
+            </ul>
+            <a href="#" id="openup">Menu</a>
+        </nav>
+    </header>
 
-    <section>
+    <div class="content-wrapper">
+     <section class="content">
 
         <article id='book-list' class="hide">
             <div class="container mt-4">
@@ -67,25 +71,20 @@
         </article>
 
         <article id="furniture-shop" class="hide">
-            <nav class="navbar">
-                <div class="navbar-center">
-                    <span class="nav-icon"><i class="fas fa-bars"></i></span>
-                </div>
-                <img src="./images/logo.svg" alt="store logo">
+            <h1 class="display-4 text-center">
+                <img src="./resources/svg/logo.svg" alt="store logo">
+                <i class="fas fa-bars"></i>Furniture Collection                
                 <div class="cart-btn">
                     <span class="nav-icon">
                         <i class="fas fa-cart-plus"></i>
                     </span>
                     <div class="cart-items"></div>
                 </div>
-            </nav>
-
-            <header class="hero">
-                <div class="bann">
-                    <h1 class="banner-title">Furniture Collection</h1>
-                    <button class="banner-btn">Shop Now</button>
-                </div>
-            </header>
+            </h1>            
+            <div class="bann">
+                <h1 class="banner-title"></h1>
+                <button class="btn btn-primary">Shop Now</button>
+            </div>
 
             <section class="products">
                 <div class="section-title">
@@ -104,18 +103,16 @@
                 </div>
                 <div class="cart-footer">
                     <h3>Your Total : $<span class="cart-total" 0></span></h3>
-                    <button class="clear-cart banner-btn">Clear Cart</button>
+                    <button class="btn btn-primary clear-cart">Clear Cart</button>
                 </div>
             </div>
-
-           
         </article>
-      
+
         <article id="meditationapp" class="hide">
             <div class="meditation-app">
                 <div class="video-container">
                     <video loop>
-                        <source src="./video/rain.mp4" type="video/mp4" />
+                        <source src="./resources/video/rain.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <div class="time-select">
@@ -125,9 +122,9 @@
                 </div>
                 <div class="player-container">
                     <audio class="song">
-                        <source src="./sounds/rain.mp3" />
+                        <source src="./resources/sounds/rain.mp3" />
                     </audio>
-                    <img src="./svg/play.svg" alt="play" class="play" />
+                    <img src="./resources/svg/play.svg" alt="play" class="play" />
                     <svg class="track-outline" width="453" height="453" viewBox="0 0 454 453" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"></circle>
@@ -139,42 +136,42 @@
                     <h3 class="time-display">0.00</h3>
                 </div>
                 <div class="sound-picker">
-                    <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
-                        <img src="./svg/rain.svg" alt="Rain" />
+                    <button data-sound="./resources/sounds/rain.mp3" data-video="./resources/video/rain.mp4">
+                        <img src="./resources/svg/rain.svg" alt="Rain" />
                     </button>
-                    <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
-                        <img src="./svg/beach.svg" alt="Beach" />
+                    <button data-sound="./resources/sounds/beach.mp3" data-video="./resources/video/beach.mp4">
+                        <img src="./resources/svg/beach.svg" alt="Beach" />
                     </button>
                 </div>
             </div>
         </article>
-    
+
         <article id="musicapp" class="hide">
             <div class="keyboard-app">
-                <header>Keyboard</header>
+                <h1>Keyboard</h1>
                 <div class="visual">Visual</div>
                 <div class="pads">
                     <!-- We cannot add styles to audio tag-->
                     <div class="pad1">
-                        <audio src="./resources/sounds/bubbles.mp3"></audio>
+                        <audio src="./resources/sounds/clap-808.wav"></audio>
                     </div>
                     <div class="pad2">
-                        <audio src="./resources/sounds/"></audio>
+                        <audio src="./resources/sounds/clap-analog.wav"></audio>
                     </div>
                     <div class="pad3">
-                        <audio src="./sounds/"></audio>
+                        <audio src="./resources/sounds/clap-slapper.wav"></audio>
                     </div>
                     <div class="pad4">
-                        <audio src="./sounds/"></audio>
+                        <audio src="./resources/sounds/crash-fat.wav"></audio>
                     </div>
                     <div class="pad5">
-                        <audio src="./sounds/"></audio>
+                        <audio src="./resources/sounds/clap-tape.wav"></audio>
                     </div>
                     <div class="pad6">
-                        <audio src="./sounds/"></audio>
+                        <audio src="./resources/sounds/clap-crushed.wav"></audio>
                     </div>
                     <div class="pad7">
-                        <audio src="./sounds/"></audio>
+                        <audio src="./resources/sounds/crash-acoustic.wav"></audio>
                     </div>
                 </div>
             </div>
@@ -182,11 +179,11 @@
 
         <article id="pdfviewerapp" class="hide">
             <div class="top-bar">
-                <button class="btn" id="prev-page">
+                <button class="btn btn-primary" id="prev-page">
                     <i class="fas fa-arrow-circle-left"></i>Prev Page
                 </button>
         
-                <button class="btn" id="next-page">
+                <button class="btn btn-primary" id="next-page">
                     <i class="fas fa-arrow-circle-right"></i>Next Page
                 </button>
         
@@ -197,10 +194,10 @@
         
             <canvas id="pdf-render"></canvas>
         </article>
-   
+    
         <article class="hide">
             <div class="bg-dark text-white">
-                <header class="bg-secondary text-center p-3 mb-5">Type It</header>
+                <h1 class="bg-secondary text-center p-3 mb-5">Type It</h1>
             </div>
             <div class="container text-center">
                 <div class="row ">
@@ -227,15 +224,16 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </article>   
 
     </section>
 </div>
 </body>
 
+<script src="./lib.js"></script>
 <script src="./index.js"></script>
 <script src="./booklistapp/booklistapp.js"></script>
-<script src="./furniture-shop-app/app.js"></script>
+<script src="./furniture-shop-app/furnitureshop.js"></script>
 <script src="./meditationapp/meditation.js"></script>
 <script src="./musicapp/keyboard.js"></script>
 <script src="./pdfviewerapp/pdfviewer.js"></script>

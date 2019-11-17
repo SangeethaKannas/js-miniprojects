@@ -21,11 +21,11 @@ const meditationApp = () => {
         if(song.paused) {
             song.play();
             video.play();
-            play.src = './svg/pause.svg'
+            play.src = './resources/svg/pause.svg'
         } else {
             song.pause();
             video.pause();
-            play.src = './svg/play.svg'
+            play.src = './resources/svg/play.svg'
         }
     }
 

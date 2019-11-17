@@ -6,7 +6,7 @@ class Book {
     }
 }
 
-class UI {
+class BooksUI {
     static displayBooks () {
         
         const storedBooks = [
@@ -23,7 +23,7 @@ class UI {
         ];
 
         const books = storedBooks
-        books.forEach(book => UI.addBookToList(book))
+        books.forEach(book => BooksUI.addBookToList(book))
     }
 
     static addBookToList(book) {
@@ -86,7 +86,7 @@ class Storage {
 }
 
 //EVent : Display Books
-document.addEventListener('DOMContentLoaded', UI.displayBooks)
+document.addEventListener('DOMContentLoaded', BooksUI.displayBooks)
 
 
 //Event Add a Book
@@ -98,13 +98,13 @@ document.querySelector("#book-form").addEventListener('submit', (e) => {
     const isbn = document.querySelector('#isbn').value
 
     if(title === '' || author === '' || isbn === '') {
-        UI.showAlert('Please fill in all fields', 'danger')
+        BooksUI.showAlert('Please fill in all fields', 'danger')
     } else {
         const book = new Book(title, author, isbn)
-        UI.addBookToList(book)
+        BooksUI.addBookToList(book)
         Storage.addBook(book)
-        UI.showAlert('Book Added', 'success');
-        UI.clearFields();
+        BooksUI.showAlert('Book Added', 'success');
+        BooksUI.clearFields();
     }    
 });
 
@@ -113,7 +113,7 @@ document.querySelector("#book-form").addEventListener('submit', (e) => {
 document.querySelector('#book-list').addEventListener('click', (e) => {
     e.preventDefault();
     
-    UI.deleteBook(e.target);
+    BooksUI.deleteBook(e.target);
     Storage.removeBook(book);
-    UI.showAlert('Book Removed', 'success');
+    BooksUI.showAlert('Book Removed', 'success');
 });
