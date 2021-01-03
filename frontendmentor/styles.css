@@ -1,0 +1,424 @@
+
+.container {
+    background-color: #fff;
+}
+
+input, button {
+    outline-style: none;
+    border: none;
+    background: none;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+    .main-section {
+        display: flex;
+    }
+
+    .tagline-section {
+        width: 50%;
+    }
+
+        .tag-line {
+            font-size: 2.9rem;
+            margin: 0;
+            color: #522055;
+        }
+
+        .description {
+            color: #492C4B;
+        }
+
+    .rating-section {
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+        .rating-container {
+            display: flex;
+            width: 31vw;
+            background-color: #F7F2F8;
+            border-radius: 5px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .rating-container:nth-child(2) {
+            margin-left: 3rem;
+        }
+        .rating-container:nth-child(3) {
+            margin-left: 6rem;
+        }
+
+            .rating {
+                width: 70%;
+                align-items: center;
+                display: flex;
+                color: #492C4B;
+            }
+
+            .stars {
+                margin-left: 1rem;
+                margin-right: 2rem;
+            }
+
+                .star {
+                    font-size: 150%;
+                    color:#ED9241;
+                }
+
+    .review-section {
+        margin-top: 4rem;
+        display: flex;
+    }
+
+        .user-card {
+            padding: 1rem;
+            background: #511F50;
+            border-radius: 3px;
+            margin-right: 1rem;
+            width: 15rem;
+            height: 6rem;
+        }
+
+        .user-card:nth-child(2) {
+            margin-top: 1rem;
+        }
+        .user-card:nth-child(3) {
+            margin-top: 2rem;
+        }
+
+            .user-details {
+                display: flex;               
+            }
+
+            .user-name {
+                font-size: 1.2rem;
+                display: block;
+                color: #FFF9FF;
+            }
+
+            .user-type {
+                color: #A2538A;
+            }
+
+            .user-comment {
+                margin-top: 0.3rem;
+                display: block;
+                color: #FFF9FF;
+                font-size: 0.9rem;
+            }
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #4747A1, #6086F1);
+}
+
+    .ip-header {
+        font-size: 2rem;
+        margin: 0.2rem 0;
+        color: white;
+    }
+
+    .ip-address-container {
+        border: 2px solid grey;
+        border-radius: 7px;
+        background-color: white;
+        margin: 2rem 0;
+        width: 38vw;
+    }
+
+        .ip-address {
+            padding: 0.5rem 1rem;
+            margin: 0;
+            border: none;
+            min-width: 75%;
+        }
+
+        .search-btn {
+            margin: 0;
+            border: none;
+            background-color: #000000;
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 5px;
+            float: right;
+        }
+
+    .search-results {
+        display: flex;
+        padding: 0.9rem;
+        margin-top: 1rem;
+        z-index: 100;
+        background-color: white;
+        border-radius: 10px;
+        height: 4rem;
+    }
+
+    .search-results > div {
+        margin: 0 1rem;
+        border-right: 1px solid #D8D8D8;
+        padding: 0 0.5resm;
+        width: 6rem;
+        font-size: 0.6rem;
+        color: #8c7f7f;
+    }
+
+        .search-results > div > span:last-child {
+            font-size: 1.3rem;
+            color: #222;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+    .search-results div:last-child {
+        border: none;
+    }
+
+    .map {
+        height: 70vh;
+        margin-top: -3rem;
+    }
+
+.testimonial-section {
+    background-image: url(./testimonials/images/pattern-curve.svg);
+    background-size: 42vw 17vh;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem 3rem;
+}
+
+    .quote-article {
+        background-image: url(./testimonials/images/pattern-quotes.svg);
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        background-size: 10vw 12vh;
+        background-position-x: 30%;
+        background-repeat: no-repeat;
+        background-position-y: 2rem;
+        z-index: 10;
+    }
+
+        .user-testimonial {
+            color: #646077;
+        }
+
+    .avator {
+        background-image: url("./testimonials/images/pattern-bg.svg");
+        background-size: 91% 98%;
+        background-repeat: no-repeat;
+        padding-top: 3rem;
+        position: relative;
+    }
+
+        .avator > picture {
+            z-index: -15;
+            padding: 0;
+            margin: 0;
+            margin-left: -33px;
+        }
+
+        .user-image {
+            max-width: 87%;
+            max-height: 92%;
+        }
+
+        .user-job-name {
+            display: flex;
+            margin-top: 1rem;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        .user-job {
+            text-align: center;
+            color: #8c7f7f;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .user-name {
+            font-weight: bold;
+            color: black;
+            margin-right: 1rem;
+        }
+
+    .navigation-buttons {
+        border-radius: 39%;
+        position: absolute;
+        bottom: 2%;
+        background: white;
+    }
+
+        .navigation-buttons > button {
+            border: none;
+            border-radius: 50%;
+            padding: 0.5rem;
+            background-color: white;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .ip-address-container {
+                width: 81vw;
+            }    
+        
+            .search-results{
+                margin-top: auto;
+                height: auto;
+                flex-direction: column;
+                width: 75vw;
+                align-items: center;
+                justify-content: center;
+            }
+        
+                .search-results > div {
+                    margin: 0;
+                    border: none;
+                    width: 100%;
+                    flex-direction: column;
+                    text-align: center;
+                }
+                
+                .search-results > div > span:last-child {
+                    margin-bottom: 0.5rem;
+                    margin-top: 0;
+                }
+        
+            .map {
+                margin-top: -6rem;
+            }
+        
+            .testimonial-section {
+                padding: 1rem 1rem;
+            }
+
+            .quote-article {
+                width: auto;
+                font-size: 1.3rem;
+                background-position: 49% top;
+                z-index: 0;
+                text-align: center;
+            }
+        
+                .user-details {
+                    flex-direction: column-reverse;
+                }
+
+                .user-testimonial {
+                    padding-top: 1rem;
+                }
+
+                .user-job-name {
+                    flex-direction: column;
+                }
+
+                .user-name {
+                    margin-right: 0;
+                    margin-bottom:0.3rem;
+                }
+        
+            .avator {
+                padding: 0;
+                margin: 0;
+                background-size: 97% 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+        
+            .avator > picture {
+                z-index: 0;
+                padding: auto;
+                margin: auto;
+                margin-left: 0;
+            }
+
+            .user-image {
+                width: 62vw;
+                height: 32vh;
+                border-radius: 5px; 
+            }
+        
+            .navigation-buttons {
+                bottom: 3%;
+                right: 41%;
+            }
+        }
+        
+.bookmark-section {
+    text-align: center;
+    width: 66vw;
+}
+
+    .logo-bookmark {
+        background-image: url('./bookmark/images/logo-bookmark.svg');
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+        .logo-bookmark {
+            max-width: 60%;
+            max-height: 2rem;
+            margin-right: -1rem;
+        }
+
+        .logo-hamburger {
+            max-width: 1rem;
+            max-height: 1rem;
+        }
+
+    .main {
+        text-align: center;
+    }
+
+        .bookmark-img {
+            max-width: 100%;
+        }
+
+
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      
+      .active, .accordion:hover {
+        background-color: #ccc; 
+      }
+      
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+      
