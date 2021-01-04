@@ -8,13 +8,13 @@ class Book {
 
 class BooksUI {
     static displayBooks () {
-        
+
         const storedBooks = [
             {
                 title: 'You Dont Know JS',
                 author: 'Kyle Simpson',
                 isbn: '1231234'
-            }, 
+            },
             {
                 title: 'Eloquent Javascript',
                 author: 'Jane Doe',
@@ -41,7 +41,6 @@ class BooksUI {
         document.querySelector('#title').value = ''
         document.querySelector('#author').value = ''
         document.querySelector('#isbn').value = ''
-    
     }
 
     static deleteBook(e1) {
@@ -77,7 +76,7 @@ class Storage {
 
     static removeBook(isbn) {
         const books = Storage.getBooks()
-        books.remove( 
+        books.remove(
             books.find(book => book.isbn === isbn)
         )
         localStorage.setItem('books', JSON.stringify(books))
@@ -86,34 +85,35 @@ class Storage {
 }
 
 //EVent : Display Books
-document.addEventListener('DOMContentLoaded', BooksUI.displayBooks)
+document.addEventListener('DOMContentLoaded', function init() {
+    BooksUI.displayBooks();
 
+    //Event Add a Book
+    document.querySelector("#book-form").addEventListener('submit', (e) => {
+        e.preventDefault();
 
-//Event Add a Book
-document.querySelector("#book-form").addEventListener('submit', (e) => {
-    e.preventDefault();
+        const title = document.querySelector('#title').value
+        const author = document.querySelector('#author').value
+        const isbn = document.querySelector('#isbn').value
 
-    const title = document.querySelector('#title').value
-    const author = document.querySelector('#author').value
-    const isbn = document.querySelector('#isbn').value
+        if(title === '' || author === '' || isbn === '') {
+            BooksUI.showAlert('Please fill in all fields', 'danger')
+        } else {
+            const book = new Book(title, author, isbn)
+            BooksUI.addBookToList(book)
+            Storage.addBook(book)
+            BooksUI.showAlert('Book Added', 'success');
+            BooksUI.clearFields();
+        }
+    });
 
-    if(title === '' || author === '' || isbn === '') {
-        BooksUI.showAlert('Please fill in all fields', 'danger')
-    } else {
-        const book = new Book(title, author, isbn)
-        BooksUI.addBookToList(book)
-        Storage.addBook(book)
-        BooksUI.showAlert('Book Added', 'success');
-        BooksUI.clearFields();
-    }    
-});
+    //Event Remove a book
 
-//Event Remove a book
+    document.querySelector('#book-list').addEventListener('click', (e) => {
+        e.preventDefault();
 
-document.querySelector('#book-list').addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    BooksUI.deleteBook(e.target);
-    Storage.removeBook(book);
-    BooksUI.showAlert('Book Removed', 'success');
-});
+        BooksUI.deleteBook(e.target);
+        Storage.removeBook(book);
+        BooksUI.showAlert('Book Removed', 'success');
+    });
+})

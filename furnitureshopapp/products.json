@@ -1,0 +1,18 @@
+{
+    "items": [
+        {
+            "sys" : { "id": "1"},
+            "fields": {
+                "title": "queen panel bed",
+                "price": "15000",
+                "image": {
+                    "fields" : {
+                        "file" : {
+                            "url" : "./resources/images/queenpanelbed.jpg"
+                        }                        
+                    }
+                }
+            }
+        }
+    ]
+}
