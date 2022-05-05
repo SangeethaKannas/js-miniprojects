@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        .result {
+            display: hide;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <header>Loan Manager</header>
+    </nav>
+
+    <section class="loans-calculator">
+        <h2>Loans Calculator</h2>
+        <input id="loanAmtInput" type="number" />
+        <button id="takeLoanBtn">Calculate</button>
+        <article class="result">
+            <div>
+                <label>Principal</label><span class="principal"></span>
+            </div>
+            <div>
+                <label>Interest</label><span class="interest"></span>
+            </div>
+            <div>
+                <label>Amount</label><span class="amount"></span>
+            </div>
+        </article>
+    </section>
+    
+    <section class="loans">
+        <div>
+            <input id="loanPrinciple" />
+            <button>Take Loan</button>
+        </div>
+    </section>
+
+    <section class="loans-dashboard">
+        <div class="loans-details">
+            <span></span>
+        </div>
+    </section>
+
+</body>
+
+<script type="text/javascript" src="./scripts.js"></script>
+
+</html>
