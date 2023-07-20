@@ -1,7 +1,7 @@
 {
-  "name": "frontendmentor",
+  "name": "js-miniprojects",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple projects in Pure javascript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
