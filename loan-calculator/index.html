@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <script>
+        function calculateInterest(amount, interest, paymentTerm = 0) {
+            if (paymentTerm < 0) {
+                paymentTerm = 0;
+            }
+            const monthlyInterest = (amount * interest) / 12
+            const monthlyPrinciple = paymentTerm - monthlyInterest;
+            const balance = amount - monthlyPrinciple;
+            return [monthlyInterest, monthlyPrinciple, balance]
+        }
+
+        function addRow() {
+            const table = document.getElementById('emiTable')
+            table.append()
+        }
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <form>
+            <div>
+                <input name="amount" type="number" />
+            </div>
+            <div>
+                <input name="interest" type="number" />
+            </div>
+            <div>
+                <input name="payment" type="number" />
+            </div>
+        </form>
+        <table id="emiTable">
+            <tr>
+                <th>Month</th>
+                <th>Payment</th>
+                <th>Principal</th>
+                <th>interest</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
